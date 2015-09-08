@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller\Home;
 class Index{
-    public function test(){
+    public static function test(){
         echo 111;
     }
 }

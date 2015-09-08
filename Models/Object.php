@@ -1,7 +1,7 @@
 <?php
 namespace Models;
 class Object{
-    public function test(){
+    public static function test(){
         var_dump(__METHOD__);
     }
 }
