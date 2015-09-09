@@ -1,8 +1,8 @@
 <?php
 define('BASEDIR',__DIR__);
-include(BASEDIR.'/Models/Loader.php');
-spl_autoload_register('\\Models\\Loader::autoload');
-Models\Object::test();
+include(BASEDIR.'/CW/Loader.php');
+spl_autoload_register('\\CW\\Loader::autoload');
+CW\Object::test();
 App\Controller\Home\Index::test();
 
 //入栈出栈(先入后出)
@@ -17,7 +17,7 @@ $queue->enqueue("data3\n");
 $queue->enqueue("data4\n");
 echo $queue->dequeue();
 echo $queue->dequeue();
-//最小堆
+//�?小堆
 $heap = new SplMinHeap();
 $heap->insert("data5\n");
 $heap->insert("data6\n");
