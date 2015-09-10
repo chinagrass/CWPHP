@@ -53,3 +53,4 @@ echo $obj('text');*/
 
 /*工厂模式*/
 $db = CW\Factory::createDatabase();
+var_dump($db);
