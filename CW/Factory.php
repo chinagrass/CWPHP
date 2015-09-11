@@ -1,6 +1,6 @@
 <?php
 namespace CW;
-/*工厂设计模式，工厂方法或者类生成对象，而不是在代码中直接new，这样可以防止类在修改后，你需要更改很多的代码*/
+/*宸ュ巶璁捐妯″紡锛屽伐鍘傛柟娉曟垨鑰呯被鐢熸垚瀵硅薄锛岃�屼笉鏄湪浠ｇ爜涓洿鎺ew锛岃繖鏍峰彲浠ラ槻姝㈢被鍦ㄤ慨鏀瑰悗锛屼綘闇�瑕佹洿鏀瑰緢澶氱殑浠ｇ爜*/
 class Factory{
     static function createDatabase(){
         return Database::getInstance();

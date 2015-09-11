@@ -1,6 +1,6 @@
 <?php
 namespace CW;
-/*单例模式，内部调用对象，当某个对象需要多次调用的时候，使用单例模式只需要调用一次就行了*/
+/*鍗曚緥妯″紡锛屽唴閮ㄨ皟鐢ㄥ璞★紝褰撴煇涓璞￠渶瑕佸娆¤皟鐢ㄧ殑鏃跺�欙紝浣跨敤鍗曚緥妯″紡鍙渶瑕佽皟鐢ㄤ竴娆″氨琛屼簡*/
 class Database{
     protected static $db;
     private function __construct(){

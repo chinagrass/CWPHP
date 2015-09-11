@@ -1,44 +1,44 @@
 <?php
 define('BASEDIR',__DIR__);
-include(BASEDIR.'/CW/Loader.php');
-spl_autoload_register('\\CW\\Loader::autoload');
-CW\Object::test();
-App\Controller\Home\Index::test();
-
-//Õ»(ÏÈ½øºó³ö)
+//include(BASEDIR.'/CW/Loader.php');
+//spl_autoload_register('\\CW\\Loader::autoload');
+//CW\Object::test();
+//App\Controller\Home\Index::test();
+require(BASEDIR.'/Templates/Home/course.template.php');
+//æ ˆ(å…ˆè¿›åå‡º)
 /*$stack = new splstack();
 $stack->push("data1\n");
 $stack->push("data2\n");
 echo $stack->pop();
 echo $stack->pop();
-//ÁĞ£¨ÏÈ½øÏÈ³ö£©
+//åˆ—ï¼ˆå…ˆè¿›å…ˆå‡ºï¼‰
 $queue = new splQueue();
 $queue->enqueue("data3\n");
 $queue->enqueue("data4\n");
 echo $queue->dequeue();
 echo $queue->dequeue();
-//¶Ñ£¨ÏÈ½øÏÈ³ö£©
+//å †ï¼ˆå…ˆè¿›å…ˆå‡ºï¼‰
 $heap = new SplMinHeap();
 $heap->insert("data5\n");
 $heap->insert("data6\n");
 echo $heap->extract();
 echo $heap->extract();
-//¹Ì¶¨³¤¶ÈµÄÊı×é
+//å›ºå®šé•¿åº¦çš„æ•°ç»„
 $array = new SplFixedArray(10);
 $array[0] = 123;
 $array[9] = 3333;
 var_dump($array);*/
 
-//PHPµÄÁ´Ê½²Ù×÷
+//PHPçš„é“¾å¼æ“ä½œ
 /*$db = new CW\Database();
 $db->where("id=1")->where("name=2")->order("order desc")->limit(10);*/
 
-/*PHPµÄÄ§Êõ·½·¨*/
+/*PHPçš„é­”æœ¯æ–¹æ³•*/
 
-//__set()/__get():½«¶ÔÏóµÄÊôĞÔ½øĞĞ½Ó¹Ü(ÊôĞÔ²»´æÔÚ»á×Ô¶¯µ÷ÓÃ£¬²¢¸³Öµ)
-//__call()/__callStatic() :ÀàµÄ·½·¨½øĞĞ¿ØÖÆ,__callStatic()ÓÃÔÚ¾²Ì¬·½·¨ÉÏ
-//__toString():½«Ò»¸öPHP¶ÔÏó×ª»»³ÉÒ»¸ö×Ö·û´®
-//__invoke():½«Ò»¸ö¶ÔÏóµ±³ÉÒ»¸öº¯ÊıÊ±»á»Øµ÷¸Ã·½·¨,°Ñ¶ÔÏóµ±³ÉÒ»¸öº¯ÊıÀ´Ö´ĞĞ
+//__set()/__get():å°†å¯¹è±¡çš„å±æ€§è¿›è¡Œæ¥ç®¡(å±æ€§ä¸å­˜åœ¨ä¼šè‡ªåŠ¨è°ƒç”¨ï¼Œå¹¶èµ‹å€¼)
+//__call()/__callStatic() :ç±»çš„æ–¹æ³•è¿›è¡Œæ§åˆ¶,__callStatic()ç”¨åœ¨é™æ€æ–¹æ³•ä¸Š
+//__toString():å°†ä¸€ä¸ªPHPå¯¹è±¡è½¬æ¢æˆä¸€ä¸ªå­—ç¬¦ä¸²
+//__invoke():å°†ä¸€ä¸ªå¯¹è±¡å½“æˆä¸€ä¸ªå‡½æ•°æ—¶ä¼šå›è°ƒè¯¥æ–¹æ³•,æŠŠå¯¹è±¡å½“æˆä¸€ä¸ªå‡½æ•°æ¥æ‰§è¡Œ
 /*$obj = new CW\Object();
 $obj->title = 'hello';
 echo $obj->title;
@@ -51,6 +51,6 @@ echo $obj;
 
 echo $obj('text');*/
 
-/*¹¤³§Ä£Ê½*/
-$db = CW\Factory::createDatabase();
-var_dump($db);
+/*å·¥å‚æ¨¡å¼*/
+//$db = CW\Factory::createDatabase();
+//var_dump($db);
