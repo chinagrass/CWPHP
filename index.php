@@ -4,7 +4,33 @@ define('BASEDIR',__DIR__);
 //spl_autoload_register('\\CW\\Loader::autoload');
 //CW\Object::test();
 //App\Controller\Home\Index::test();
-require(BASEDIR.'/Templates/Home/course.template.php');
+switch(@$_GET['action']){
+    case 'datum':
+        require(BASEDIR.'/Templates/Home/datum.template.php');
+        break;
+    case 'applyList':
+        require(BASEDIR.'/Templates/Home/applyList.template.php');
+        break;
+    case 'pendApplyList':
+        require(BASEDIR.'/Templates/Home/PendApplyList.template.php');
+        break;
+    case 'haveApplyList':
+        require(BASEDIR.'/Templates/Home/haveApplyList.template.php');
+        break;
+    case 'rejectedList':
+        require(BASEDIR.'/Templates/Home/rejectedList.template.php');
+        break;
+    case 'orderList':
+        require(BASEDIR.'/Templates/Home/orderList.template.php');
+        break;
+    case 'completedOrderList':
+        require(BASEDIR.'/Templates/Home/completedOrderList.template.php');
+        break;
+    case 'course':
+    default:
+        require(BASEDIR.'/Templates/Home/course.template.php');
+        break;
+}
 //栈(先进后出)
 /*$stack = new splstack();
 $stack->push("data1\n");
